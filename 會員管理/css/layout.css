@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper{
+	width:1000px;
+	//background-color:#000;
+	margin: 0px auto;
+}
+#header{
+	//background-color:#F69;
+}
+#header2{
+	float:right;
+	//background-color:#F69;
+}
+/*
+
+左側邊欄
+
+*/
+#sidebar1{
+	font-family: "黑體";
+	width:210px;
+	float:left;
+	//background-color:#0FF;
+}
+.login{
+	background-color:#f5deb3;
+	border-style: groove
+}
+/*
+
+中央
+
+*/
+#content{
+	font-family:"黑體";
+	width:550px;
+	//background-color:#FF0000;
+	float:left;
+}
+#accordion{
+	float:center;
+	width:550px;
+	margin:5px 0 5px 10px;
+}
+.catalog{
+	position : relative;
+	color:#fff;
+	background-color:#deb887;
+	border-bottom:1px solid #fff;
+}
+.catalog h4{
+	margin:0;
+	cursor:pointer;
+	text-indent:5px;
+	padding:5px 0;
+}
+.active{
+	background-color:#ffa500; 
+}
+.item{
+	background-color:#fffacd;
+	margin :0px 0 0px 0;
+	padding:5px 5px 10px 5px;
+	list-style-type : none; 
+}
+.item li{
+	display:block;
+ 	margin:0; 
+	padding:1px 0px; 
+}
+.item li a {
+	color:#000000; 
+}
+/*
+
+右側邊欄
+
+*/
+#sidebar2{
+	font-family: "黑體";
+	width:220px;
+	float:right;
+	//background-color:#60F;
+}
+.link{
+	//background-color:#F69;
+}
+a{
+	height: 0px;
+	color: #4D2078;
+	text-decoration:none; 
+}
+a:hover{
+	height: 10px;
+	color: #9900CC;
+	text-decoration:none;
+	text-decoration:underline;
+	position:relative;
+	left:2px;
+	top:2px;
+}
+/*
+
+底
+
+*/
+#footer{
+	font-family: "黑體";
+	background-color:#3399FF;
+	clear:both;
+}
