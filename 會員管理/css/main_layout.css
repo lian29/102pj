@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper{
+	width:1000px;
+	//background-color:#000;
+	margin: 0px auto;
+}
+#header{
+	//background-color:#F69;
+}
+#header2{
+	float:right;
+	//background-color:#F69;
+}
+/*
+
+左側邊欄
+
+*/
+#sidebar1{
+	font-family: "黑體";
+	width:210px;
+	float:left;
+	//background-color:#0FF;
+}
+.login{
+	background-color:#f5deb3;
+	border-style: groove
+}
+/*
+
+中央
+
+*/
+#content{
+	font-family:"黑體";
+	width:550px;
+	//background-color:#FF0000;
+	float:left;
+}
+div, ul, li{
+	margin:0;
+	padding:0;
+}
+#container{
+	width:530px;
+	margin:5px auto;
+}
+.fix:after{
+	content:".";
+	clear:both;
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+#tabs{
+	position:relative;
+	list-style-type:none;
+}
+#tabs li{
+	position:relative;
+	float:left;
+	width:155px;
+	text-align:center;
+	margin:0 3px;
+}
+#tabs li a.active {
+	position:relative;
+	color:#555;
+	top:1px;
+	background-color:#ffa500;
+}
+#tabs li a {
+	position:relative;
+	border-top:1px solid #333;
+	border-left:1px solid #333;
+	border-right:1px solid #333;
+	color:#fff;
+	display: block;
+	background-color:#deb887;;
+	padding:8px 5px 20px 0px;            
+	text-decoration:none;
+}
+.container_1{
+	border:1px solid #333;
+	background-color:#fff;
+}
+.tab{
+	display:none;
+}
+/*
+
+右側邊欄
+
+*/
+#sidebar2{
+	font-family:"黑體";
+	width:220px;
+	float:right;
+	//background-color:#60F;
+}
+.link{
+	//background-color:#F69;
+}
+a{
+	height: 0px;
+	color: #4D2078;
+	text-decoration:none; 
+}
+/*a:hover{
+	height: 10px;
+	color: #9900CC;
+	text-decoration:none;
+	text-decoration:underline;
+	position:relative;
+	left:2px;
+	top:2px;
+}*/
+/*
+
+底
+
+*/
+#footer{
+	font-family: "黑體";
+	background-color:#3399FF;
+	clear:both;
+}

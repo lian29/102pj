@@ -3,7 +3,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>資訊管理系 - 學生專區</title>
-<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/main_layout.css" rel="stylesheet" type="text/css" />
+<script src="jquery-1.7.1.js"></script>
+<script language="JavaScript">
+$(document).ready(function(){
+   $('.tab:first').show()  
+   $('#tabs li a:first').addClass('active');
+   $('ul#tabs li a').click(function() {
+      var index = $('ul#tabs li a').index(this);
+      $('ul#tabs li a').removeClass('active');
+      $(".tab:visible").hide();
+      $(".tab:eq(" + index + ")").show();
+      $(this).addClass('active');
+      return false;
+   });
+});
+</script>
 </head>
 
 <body>
@@ -29,7 +44,7 @@
 <p align="center"><img src="images/im.png"></p>
 
 </div>
-<div id="sidebar1">
+<div id="sidebar1">	
 	<img src="images/登入身份.png">
 	<div class="login">
     <p>帳號：<?php echo $row['student_id'] ?></p>
@@ -39,7 +54,15 @@
 	</div>
 </div>
 <div id="content">
-<?php
+<div id="container">
+   <ul id="tabs" class="fix">
+      <li><a href="#">累計證照</a></li>
+      <li><a href="#">點數累計</a></li>
+      <li><a href="#">基本資料修改</a></li>
+   </ul>
+   <div class="container_1">
+      <div class="tab">
+      <p><?php
       $sql = "SELECT 證照名稱,考取學年,考取學期,國內國外,級別 FROM `data` where 學號 = '$student_id'";
       $result = execute_sql("License", $sql, $link);
 	  echo "<table border='1' align='center' cellspacing='0' cellpadding='0'><tr align='center' bgcolor='FF8F19'>";
@@ -56,7 +79,17 @@
       echo "</table>" ;
       mysql_free_result($result);
       mysql_close($link);
-?>
+	?></p>
+      </div>
+      <div class="tab">
+      <p>功能建制中</p>
+      </div>
+      <div class="tab">
+      <p>功能建制中</p>
+      </div>        
+   </div>
+</div>   
+
 </div>
 
 <div id="sidebar2">
