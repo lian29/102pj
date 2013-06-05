@@ -38,6 +38,10 @@
 	//background-color:#FF0000;
 	float:left;
 }
+div, ul, li{
+	margin:0;
+	padding:0;
+}
 #accordion{
 	float:center;
 	width:550px;
@@ -69,7 +73,7 @@
  	margin:0; 
 	padding:1px 0px; 
 }
-.item li a {
+.item li a{
 	color:#000000; 
 }
 /*
@@ -86,12 +90,15 @@
 .link{
 	//background-color:#F69;
 }
-a{
+.link li{
+	list-style-type: none;
+}
+.link a{
 	height: 0px;
 	color: #4D2078;
 	text-decoration:none; 
 }
-a:hover{
+.link a:hover{
 	height: 10px;
 	color: #9900CC;
 	text-decoration:none;
