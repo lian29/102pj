@@ -50,6 +50,7 @@ $(document).ready(function(){
     <p>帳號：<?php echo $row['student_id'] ?></p>
     <p>姓名：<?php echo $row['name'] ?></p>
     <p>學制：<?php echo $row['class'] ?></p>    
+    <p><a href=#>資本資料修改</a></p>
     <p><a href="logout.php">登出網站</a></p>
 	</div>
 </div>
@@ -58,7 +59,7 @@ $(document).ready(function(){
    <ul id="tabs" class="fix">
       <li><a href="#">累計證照</a></li>
       <li><a href="#">點數累計</a></li>
-      <li><a href="#">基本資料修改</a></li>
+      <li><a href="#">證照申請</a></li>
    </ul>
    <div class="container_1">
       <div class="tab">
@@ -107,16 +108,6 @@ $(document).ready(function(){
 	<ul>
 	<li><a href="http://itia.im.tpcu.edu.tw/itia2013/">ITIA研討會</a></li>
 	</ul>
-
-<ul>
-kkkkk
-	<li><a href="http://www.tpcu.edu.tw/bin/home.php">臺北城市科技大學</a></li>
-	<li><a href="http://www.im.tpcu.edu.tw/bin/home.php">資訊管理系</a></li>
-	<li><a href="http://203.64.215.79/tsint/">校務系統</a></li>
-	<li><a href="http://eportfolio.tpcu.edu.tw/moodle/">Moodle線上學習平台</a></li>
-	</ul>
-
-
 	</div>
 </div>
 <div id="footer">版權宣告區</div>

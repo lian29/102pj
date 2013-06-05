@@ -27,6 +27,25 @@
 	background-color:#f5deb3;
 	border-style: groove
 }
+.login p{
+	line-height:5px;
+}
+.login a{
+	line-height:5px;
+	font-size: 13px;
+	text-decoration:none;
+	color: #0000cd;
+}
+.login a:hover{
+	height: 10px;
+	color:#ff0000;
+	text-decoration:none;
+	text-decoration:underline;
+	position:relative;
+	left:2px;
+	top:2px;
+
+}
 /*
 
 中央
