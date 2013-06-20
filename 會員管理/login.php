@@ -2,25 +2,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>資訊管理系 - 學生專區</title>
-<link href="css/main_layout.css" rel="stylesheet" type="text/css" />
+<title>資訊管理系 - 證照查詢系統</title>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/login_layout.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      function check_data()
+      {
+        if (document.myForm.student_id.value.length == 0)
+          alert("帳號不可以空白");
+        else if (document.myForm.password.value.length == 0)
+          alert("密碼不可以空白");
+        else 
+          myForm.submit();
+      }
+    </script>
 <script src="jquery-1.7.1.js"></script>
 <script language="JavaScript">
-$(document).ready(function(){
-   $('.tab:first').show()  
-   $('#tabs li a:first').addClass('active');
-   $('ul#tabs li a').click(function() {
-      var index = $('ul#tabs li a').index(this);
-      $('ul#tabs li a').removeClass('active');
-      $(".tab:visible").hide();
-      $(".tab:eq(" + index + ")").show();
-      $(this).addClass('active');
-      return false;
+$(document).ready(function() {
+   $('.item').not(':first').hide();
+   $('.item:first').show();
+   $('.catalog:first').addClass('active'); 
+   $('.catalog').click(function() {
+   $('.item:visible').slideUp('slow')
+        .prev().removeClass('active');
+   $(this).addClass('active').next().slideDown('slow');
    });
 });
 </script>
 </head>
-
 <body>
 <?php
 	require_once("dbtools.inc.php");
@@ -44,7 +53,7 @@ $(document).ready(function(){
 <p align="center"><img src="images/im.png"></p>
 
 </div>
-<div id="sidebar1">	
+<div id="sidebar1">
 	<img src="images/登入身份.png">
 	<div class="login">
     <p>帳號：<?php echo $row['student_id'] ?></p>
@@ -54,43 +63,40 @@ $(document).ready(function(){
     <p><a href="logout.php">登出網站</a></p>
 	</div>
 </div>
+</form>
 <div id="content">
-<div id="container">
-   <ul id="tabs" class="fix">
-      <li><a href="#">累計證照</a></li>
-      <li><a href="#">點數累計</a></li>
-      <li><a href="#">證照申請</a></li>
-   </ul>
-   <div class="container_1">
-      <div class="tab">
-      <p><?php
-      $sql = "SELECT 證照名稱,考取學年,考取學期,國內國外,級別 FROM `data` where 學號 = '$student_id'";
-      $result = execute_sql("License", $sql, $link);
-	  echo "<table border='1' align='center' cellspacing='0' cellpadding='0'><tr align='center' bgcolor='FF8F19'>";
-	  for ($i = 0; $i < mysql_num_fields($result); $i++)   
-	  // 顯示欄位名稱
-      echo "<td>" . mysql_fetch_field($result, $i)->name. "</td>";		
-	  for ($j = 0; $j < mysql_num_rows($result); $j++)    
-	  // 顯示欄位內容
-      {
-      echo "<tr>";				
-      for ($k = 0; $k < mysql_num_fields($result); $k++)
-      echo "<td>" . mysql_result($result, $j, $k) . "</td>";				
-      }
-      echo "</table>" ;
-      mysql_free_result($result);
-      mysql_close($link);
-	?></p>
-      </div>
-      <div class="tab">
-      <p>功能建制中</p>
-      </div>
-      <div class="tab">
-      <p>功能建制中</p>
-      </div>        
-   </div>
-</div>   
-
+	<div id="accordion">
+	<div class="catalog">
+		<h4>系上公告</h4>
+	</div>
+	<ul class="item">
+		<li><img src="images/pdf.gif"><a href='pdf/pta_7114_9707079_07181.pdf'> 102學年度行事曆</a></li> 
+		<li><img src="images/pdf.gif"><a href='#'> 101學年度行事曆</a></li> 
+		<li><img src="images/pdf.gif"><a href='#'> 100學年度行事曆</a></li>
+		<li><img src="images/pdf.gif"><a href='#'> 99學年度行事曆</a></li>
+	</ul>
+	<div class="catalog">
+		<h4>申請流程</h4>
+	</div>
+	<ul class="item">
+		<li><a href='#'>Java</a></li> 
+		<li><a href='#'>Visual Basic</a></li> 
+		<li><a href='#'>Visual C#</a></li>
+	</ul>
+	<div class="catalog">
+		<h4>重要事項</h4>
+	</div>
+	<ul class="item">
+		<li><a href='#'>Java</a></li> 
+		<li><a href='#'>Visual Basic</a></li> 
+		<li><a href='#'>Visual C#</a></li>
+		<li><a href='#'>HTML</a></li>
+		<li><a href='#'>PHP</a></li>
+		<li><a href='#'>JavaScript</a></li>
+		<li><a href='#'>jQuery</a></li>
+		<li><a href='#'>MySQL</a></li>
+	</ul>
+	</div>
 </div>
 
 <div id="sidebar2">
@@ -111,6 +117,6 @@ $(document).ready(function(){
 	</div>
 </div>
 <div id="footer">版權宣告區</div>
-</div>
+    </div>
 </body>
 </html>

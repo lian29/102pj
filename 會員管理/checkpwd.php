@@ -32,7 +32,7 @@
 		//將使用者資料加入 session
     mysql_free_result($result);			//釋放 $result 佔用的記憶體    	
     mysql_close($link);					//關閉資料連接
-    header("location:main.php");
+    header("location:login.php");
 
   }
 ?> 
