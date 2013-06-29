@@ -47,11 +47,17 @@ $(document).ready(function(){
 <div id="sidebar1">	
 	<img src="images/登入身份.png">
 	<div class="login">
-    <p>帳號：<?php echo $row['student_id'] ?></p>
-    <p>姓名：<?php echo $row['name'] ?></p>
-    <p>學制：<?php echo $row['class'] ?></p>    
-    <p><a href=#>資本資料修改</a></p>
-    <p><a href="logout.php">登出網站</a></p>
+	<p>帳號：<?php echo $row['student_id'] ?></p>
+	<p>姓名：<?php echo $row['name'] ?></p>
+	<p>學制：<?php echo $row['class'] ?></p>    
+	<p><a href=#>資本資料修改</a></p>
+	<p><a href="logout.php">登出網站</a></p>
+	</div>
+	<div class="function">
+	<p><img src="images/主選單.png"></p>
+	<ul>
+	<li><a href="main.php">證照查詢</a></li>
+	<ul>
 	</div>
 </div>
 <div id="content">

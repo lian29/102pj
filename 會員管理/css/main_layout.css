@@ -46,6 +46,28 @@
 	top:2px;
 
 }
+.function{
+	
+}
+.function li{
+	list-style-type: none;
+	font-size: 140%;
+	text-indent: 10%;
+}
+.function a{
+	height: 0px;
+	color: #0000ff;
+	text-decoration:none; 
+}
+.function a:hover{
+	height: 10px;
+	color: #ffa500;
+	text-decoration:none;
+	text-decoration:underline;
+	position:relative;
+	left:2px;
+	top:2px;
+}
 /*
 
 中央

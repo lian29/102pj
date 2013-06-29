@@ -53,9 +53,8 @@ $(document).ready(function(){
         <input type="reset" value="重填">
    	</p>
     </form>
-	</div>
 </div>
-</form>
+</div>
 <div id="content">
 	<div id="accordion">
 	<div class="catalog">
