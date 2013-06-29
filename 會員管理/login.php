@@ -67,6 +67,14 @@ $(document).ready(function() {
 <div id="content">
 	<div id="accordion">
 	<div class="catalog">
+		<h4>最新消息</h4>
+	</div>
+	<ul class="item">
+		<li><a href='#'>Java</a></li> 
+		<li><a href='#'>Visual Basic</a></li> 
+		<li><a href='#'>Visual C#</a></li>
+	</ul>
+	<div class="catalog">
 		<h4>系上公告</h4>
 	</div>
 	<ul class="item">

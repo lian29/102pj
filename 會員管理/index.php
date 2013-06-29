@@ -57,6 +57,14 @@ $(document).ready(function() {
 <div id="content">
 	<div id="accordion">
 	<div class="catalog">
+		<h4>最新消息</h4>
+	</div>
+	<ul class="item">
+		<li><a href='#'>Java</a></li> 
+		<li><a href='#'>Visual Basic</a></li> 
+		<li><a href='#'>Visual C#</a></li>
+	</ul>
+	<div class="catalog">
 		<h4>系上公告</h4>
 	</div>
 	<ul class="item">
@@ -66,7 +74,7 @@ $(document).ready(function() {
 		<li><img src="images/pdf.gif"><a href='#'> 99學年度行事曆</a></li>
 	</ul>
 	<div class="catalog">
-		<h4>申請流程</h4>
+		<h4>登錄流程</h4>
 	</div>
 	<ul class="item">
 		<li><a href='#'>Java</a></li> 
