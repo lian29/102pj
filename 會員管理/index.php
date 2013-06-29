@@ -17,14 +17,16 @@
     </script>
 <script src="jquery-1.7.1.js"></script>
 <script language="JavaScript">
-$(document).ready(function() {
-   $('.item').not(':first').hide();
-   $('.item:first').show();
-   $('.catalog:first').addClass('active'); 
-   $('.catalog').click(function() {
-   $('.item:visible').slideUp('slow')
-        .prev().removeClass('active');
-   $(this).addClass('active').next().slideDown('slow');
+$(document).ready(function(){
+   $('.tab:first').show()  
+   $('#tabs li a:first').addClass('active');
+   $('ul#tabs li a').click(function() {
+      var index = $('ul#tabs li a').index(this);
+      $('ul#tabs li a').removeClass('active');
+      $(".tab:visible").hide();
+      $(".tab:eq(" + index + ")").show();
+      $(this).addClass('active');
+      return false;
    });
 });
 </script>

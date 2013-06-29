@@ -16,20 +16,6 @@
           myForm.submit();
       }
     </script>
-<script src="jquery-1.7.1.js"></script>
-<script language="JavaScript">
-$(document).ready(function() {
-   $('.item').not(':first').hide();
-   $('.item:first').show();
-   $('.catalog:first').addClass('active'); 
-   $('.catalog').click(function() {
-   $('.item:visible').slideUp('slow')
-        .prev().removeClass('active');
-   $(this).addClass('active').next().slideDown('slow');
-   });
-});
-</script>
-</head>
 <body>
 <?php
 	require_once("dbtools.inc.php");
@@ -84,7 +70,7 @@ $(document).ready(function() {
 		<li><img src="images/pdf.gif"><a href='#'> 99學年度行事曆</a></li>
 	</ul>
 	<div class="catalog">
-		<h4>申請流程</h4>
+		<h4>登錄流程</h4>
 	</div>
 	<ul class="item">
 		<li><a href='#'>Java</a></li> 

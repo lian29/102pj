@@ -46,6 +46,7 @@ div, ul, li{
 	float:center;
 	width:550px;
 	margin:5px 0 5px 10px;
+	text-indent: 10%;
 }
 .catalog{
 	position : relative;
@@ -66,7 +67,9 @@ div, ul, li{
 	background-color:#fffacd;
 	margin :0px 0 0px 0;
 	padding:5px 5px 10px 5px;
-	list-style-type : none; 
+	list-style-type : none;
+	letter-spacing: 2px;
+	line-height: 130%;
 }
 .item li{
 	display:block;
