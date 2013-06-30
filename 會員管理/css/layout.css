@@ -73,7 +73,7 @@ div, ul, li{
 .catalog{
 	position : relative;
 	color:#fff;
-	background-color:#deb887;
+	background-color:#ffa500;
 	border-bottom:1px solid #fff;
 }
 .catalog h4{
@@ -81,9 +81,6 @@ div, ul, li{
 	cursor:pointer;
 	text-indent:5px;
 	padding:5px 0;
-}
-.active{
-	background-color:#ffa500; 
 }
 .item{
 	background-color:#fffacd;
@@ -99,7 +96,8 @@ div, ul, li{
 	padding:1px 0px; 
 }
 .item li a{
-	color:#000000; 
+	color:#000000;
+	text-decoration:none; 
 }
 /*
 
