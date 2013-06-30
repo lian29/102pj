@@ -57,6 +57,10 @@ sudo apt-get install ssh
 $ CD〜/ SSH 
 ＃檢查看是否有一個名為"SSH"在你的用戶目錄
 
+##第2步：生成新的SSH密鑰
+$ ssh-keygen -t rsa -C "your_email@youremail.com"
 
+##步驟3：添加你的SSH密鑰GitHub上
 
-
+##步驟4：測試
+$ ssh -T git@github.com
