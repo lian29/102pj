@@ -46,3 +46,6 @@
 
 默認情況下緩存密碼15分鐘，可以使用以下指令將緩存設置為1小時（以秒為單位設置）
 `git config --global credential.helper 'cache --timeout=3600'`
+
+
+##SSH公鑰
