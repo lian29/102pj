@@ -57,4 +57,3 @@ sudo apt-get install ssh
 $ CD〜/ SSH 
 ＃檢查看是否有一個名為"SSH"在你的用戶目錄
 
-
