@@ -52,3 +52,9 @@
 
 安裝ssh使用下面的指令
 sudo apt-get install ssh
+
+##第1步：檢查SSH密鑰
+$ CD〜/ SSH 
+＃檢查看是否有一個名為"SSH"在你的用戶目錄
+
+
