@@ -49,3 +49,6 @@
 
 
 ##SSH公鑰
+
+安裝ssh使用下面的指令
+sudo apt-get install ssh
