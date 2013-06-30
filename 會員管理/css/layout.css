@@ -99,6 +99,10 @@ div, ul, li{
 	color:#000000;
 	text-decoration:none; 
 }
+.item a:hover{
+	color:#0000cd;
+	text-decoration:underline;
+}
 /*
 
 右側邊欄
