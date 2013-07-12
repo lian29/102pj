@@ -57,7 +57,7 @@ $(document).ready(function(){
 	<p>帳號：<?php echo $row['student_id'] ?></p>
 	<p>姓名：<?php echo $row['name'] ?></p>
 	<p>學制：<?php echo $row['class'] ?></p>    
-	<p><a href=#>資本資料修改</a></p>
+	<p><a href=#>基本資料修改</a></p>
 	<p><a href="logout.php">登出網站</a></p>
 	</div>
 	<div class="function">

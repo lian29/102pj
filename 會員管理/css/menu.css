@@ -7,12 +7,12 @@
 	padding:0; 
 	margin:0;
 	list-style:none;
-	width:210px;
+	width:202px;
+	border:solid #ffa500 4px;
 }
 
 #menu li{
-	background-color:#555;
-	border-right:1px solid #FFFFFF;
+	background-color:#ffa500;
 	list-style-type:none;
 }
 
@@ -27,5 +27,5 @@
 	left: auto;
 }
 .active{
-	background-color:#015287;
+	background-color:#ff00ff;
 }
