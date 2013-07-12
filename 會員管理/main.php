@@ -4,21 +4,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>資訊管理系 - 學生專區</title>
 <link href="css/main_layout.css" rel="stylesheet" type="text/css" />
-<script src="jquery-1.7.1.js"></script>
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<link href="jQueryEasyUI/easyui.css" rel="stylesheet" type="text/css">
+<link href="jQueryEasyUI/icon.css" rel="stylesheet" type="text/css">
+<link href="jQueryEasyUI/demo.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="jQueryEasyUI/jquery.min.js"></script>
+<script type="text/javascript" src="jQueryEasyUI/jquery.easyui.min.js"></script>
+<!--主選單開始-->
 <script language="JavaScript">
 $(document).ready(function(){
-   $('.tab:first').show()  
-   $('#tabs li a:first').addClass('active');
-   $('ul#tabs li a').click(function() {
-      var index = $('ul#tabs li a').index(this);
-      $('ul#tabs li a').removeClass('active');
-      $(".tab:visible").hide();
-      $(".tab:eq(" + index + ")").show();
-      $(this).addClass('active');
-      return false;
-   });
+  $('#menu li ul').hide();
+  $('#menu li').hover(
+    function() {
+       $(this).find('ul').slideDown('fast');
+       $(this).find('a:first').addClass('active');
+    },function() {
+       $(this).find('.submenu').fadeOut('fast');
+       $(this).find('a').removeClass("active");
+    });
 });
 </script>
+<!--主選單結束-->
 </head>
 
 <body>
@@ -55,24 +62,36 @@ $(document).ready(function(){
 	</div>
 	<div class="function">
 	<p><img src="images/主選單.png"></p>
-	<ul>
-	<li><a href="main.php">證照查詢</a></li>
-	<ul>
+   	<ul id="menu">
+      		<li><a href="#">主選單</a>
+         	<ul class="submenu">
+          	<li><a href="login.php">回首頁</a></li>
+          	<li><a href="#">證照查詢</a></li>
+          	<li><a href="#">HTML 5</a></li>
+        </ul>
 	</div>
 </div>
 <div id="content">
 <div id="container">
-   <ul id="tabs" class="fix">
-      <li><a href="#">累計證照</a></li>
-      <li><a href="#">點數累計</a></li>
-      <li><a href="#">證照申請</a></li>
-   </ul>
-   <div class="container_1">
-      <div class="tab">
-      <p><?php
+	<div style="margin:10px 0;">
+	<div class="demo-info">
+		<div class="demo-tip icon-tip"></div>
+		<div>單擊“位置”下拉列表中選擇一個項目，改變標籤的位置。</div>
+	</div>
+		<span>位置:</span>
+		<select onchange="$('#tt').tabs({tabPosition:this.value})">
+			<option value="top">頂端</option>
+			<option value="bottom">底端</option>
+			<option value="left">左側</option>
+			<option value="right">右側</option>
+		</select>
+	</div>
+	<div id="tt" class="easyui-tabs" style="width:550px;height:300px">
+		<div title="取得證照" style="padding:10px">
+<?php
       $sql = "SELECT 證照名稱,考取學年,考取學期,國內國外,級別 FROM `data` where 學號 = '$student_id'";
       $result = execute_sql("License", $sql, $link);
-	  echo "<table border='1' align='center' cellspacing='0' cellpadding='0'><tr align='center' bgcolor='FF8F19'>";
+	echo "<table border='1' align='center' cellspacing='0' cellpadding='0'><tr align='center' bgcolor='FF8F19'>";
 	  for ($i = 0; $i < mysql_num_fields($result); $i++)   
 	  // 顯示欄位名稱
       echo "<td>" . mysql_fetch_field($result, $i)->name. "</td>";		
@@ -86,16 +105,16 @@ $(document).ready(function(){
       echo "</table>" ;
       mysql_free_result($result);
       mysql_close($link);
-	?></p>
-      </div>
-      <div class="tab">
-      <p>功能建制中</p>
-      </div>
-      <div class="tab">
-      <p>功能建制中</p>
-      </div>        
-   </div>
-</div>   
+	?>
+		</div>
+		<div title="點數累計" style="padding:10px">
+			功能建制中.
+		</div>
+		<div title="功能建制中" style="padding:10px">
+			功能建制中.
+		</div>
+	</div>
+</div>
 
 </div>
 

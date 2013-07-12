@@ -5,6 +5,8 @@
 <title>資訊管理系 - 證照查詢系統</title>
 <link href="css/layout.css" rel="stylesheet" type="text/css" />
 <link href="css/login_layout.css" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+<script src="jquery-1.7.1.js"></script>
     <script type="text/javascript">
       function check_data()
       {
@@ -16,6 +18,21 @@
           myForm.submit();
       }
     </script>
+<!--主選單開始-->
+<script language="JavaScript">
+$(document).ready(function(){
+  $('#menu li ul').hide();
+  $('#menu li').hover(
+    function() {
+       $(this).find('ul').slideDown('fast');
+       $(this).find('a:first').addClass('active');
+    },function() {
+       $(this).find('.submenu').fadeOut('fast');
+       $(this).find('a').removeClass("active");
+    });
+});
+</script>
+<!--主選單結束-->
 <body>
 <?php
 	require_once("dbtools.inc.php");
@@ -50,9 +67,13 @@
 	</div>
 	<div class="function">
 	<p><img src="images/主選單.png"></p>
-	<ul>
-	<li><a href="main.php">證照查詢</a></li>
-	<ul>
+   	<ul id="menu">
+      		<li><a href="#">主選單</a>
+         	<ul class="submenu">
+          	<li><a href="#">回首頁</a></li>
+          	<li><a href="main.php">證照查詢</a></li>
+          	<li><a href="#">HTML 5</a></li>
+        </ul>
 	</div>
 </div>
 <div id="content">

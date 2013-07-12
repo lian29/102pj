@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+#menu{
+	width:210px;
+}
+#menu ul{
+	padding:0; 
+	margin:0;
+	list-style:none;
+	width:210px;
+}
+
+#menu li{
+	background-color:#555;
+	border-right:1px solid #FFFFFF;
+	list-style-type:none;
+}
+
+#menu a{
+	display:block;
+	padding:5px;
+	color:white;
+
+}
+#menu li ul{
+	position:absolute;
+	left: auto;
+}
+.active{
+	background-color:#015287;
+}
