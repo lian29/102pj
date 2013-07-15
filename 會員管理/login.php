@@ -123,10 +123,10 @@ $(document).ready(function(){
 	<div class="link">
 	<p><img src="images/相關連結.png"></p>
 	<ul>
-	<li><a href="http://www.tpcu.edu.tw/bin/home.php">臺北城市科技大學</a></li>
-	<li><a href="http://www.im.tpcu.edu.tw/bin/home.php">資訊管理系</a></li>
-	<li><a href="http://203.64.215.79/tsint/">校務系統</a></li>
-	<li><a href="http://eportfolio.tpcu.edu.tw/moodle/">Moodle線上學習平台</a></li>
+	<li><a href="http://www.tpcu.edu.tw/bin/home.php">臺北城市科技大學</a></li></br>
+	<li><a href="http://www.im.tpcu.edu.tw/bin/home.php">資訊管理系</a></li></br>
+	<li><a href="http://203.64.215.79/tsint/">校務系統</a></li></br>
+	<li><a href="http://eportfolio.tpcu.edu.tw/moodle/">Moodle線上學習平台</a></li></br>
 	</ul>
 	</div>
 	<div class="link">
