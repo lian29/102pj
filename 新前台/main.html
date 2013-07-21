@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>資訊管理系 - 證照查詢系統</title>
+<link rel="stylesheet" type="text/css" href="css/easyui.css"/>
+<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/backend.js"></script>
+</head>
+<body class="easyui-layout">
+	<div region="north" border="true" class="cs-north">
+		<div class="cs-north-bg">
+			<div class="cs-north-logo">
+				<img src="css/images/tip.png">
+				姓名：
+				學制：
+			<a href="logout.php">登出網站</a>
+			</div>
+			<div class="cs-north-logo_1">
+			證照管理系統
+			
+			</div>
+		</div>
+	</div>
+	<div region="west" border="true" split="true" title="主選單" class="cs-west">
+		<div class="easyui-accordion" fit="true" border="false">
+				<div title="公告區">
+					<h3><a href="javascript:void(0);" src="mng/announcement/news/index.html" class="cs-navi-tab">最新消息</a></p></h3>
+					<h3><a href="javascript:void(0);" src="mng/announcement/announcement/index.html" class="cs-navi-tab">系上公告</a></p></h3>
+					<h3><a href="javascript:void(0);" src="mng/announcement/process/index.html" class="cs-navi-tab">登錄流程</a></p></h3>
+				</div>
+				<div title="個人區">
+					<h3><a href="javascript:void(0);" src="mng/personal/password/index.html" class="cs-navi-tab">密碼修改</a></p></h3>
+					<h3><a href="javascript:void(0);" src="mng/personal/data/index.html" class="cs-navi-tab">證照登錄</a></p></h3>
+					<h3><a href="javascript:void(0);" src="mng/personal/accumulative/index.html" class="cs-navi-tab">證照累計點數查詢</a></p></h3>
+					<h3><a href="javascript:void(0);" src="mng/personal/audit/index.html" class="cs-navi-tab">證照審核查詢</a></p></h3>
+				</div>
+				<div title="證照查詢區">
+					<h3><a href="javascript:void(0);" src="mng/license/exam/index.html" class="cs-navi-tab">近期證照考試</a></p></h3>
+					<h3><a href="javascript:void(0);" src="mng/license/check_license/index.html" class="cs-navi-tab">各證照點數查詢</a></p></h3>
+				</div>
+				<div title="相關連結">
+				<h3><a href="javascript:void(0);" src="http://itia.im.tpcu.edu.tw/itia2013/" class="cs-navi-tab">I T I A</a></p></h3>
+				<h3><a href="javascript:void(0);" src="http://www.appledaily.com.tw/" class="cs-navi-tab">蘋果日報</a></p></h3>
+				<h3><a href="javascript:void(0);" src="http://tw.yahoo.com/" class="cs-navi-tab">Yahoo!</a></p></h3>
+				<h3><a href="javascript:void(0);" src="http://www.tpcu.edu.tw/bin/home.php" class="cs-navi-tab">T P C U</a></p></h3>
+				</div>
+		</div>
+	</div>
+	<div id="mainPanle" region="center" border="true" border="false">
+		 <div id="tabs" class="easyui-tabs"  fit="true" border="false" >
+                <div title="Home">
+				<div class="cs-home-remark">
+					<h1>歡迎使用證照管理系統</h1> <br>
+					<h3>歡迎使用</h3></br>
+					在各分頁點擊右鍵即可重新整理</br>
+					第三行</br>
+				</div>
+				</div>
+        </div>
+	</div>
+	<div region="south" border="false" class="cs-south">版權宣告</div>
+	
+	<div id="mm" class="easyui-menu cs-tab-menu">
+		<div id="mm-tabupdate">重新整理</div>
+		<div class="menu-sep"></div>
+		<div id="mm-tabclose">關閉</div>
+		<div id="mm-tabcloseother">關閉其他</div>
+		<div id="mm-tabcloseall">關閉全部</div>
+	</div>
+</body>
+</html>

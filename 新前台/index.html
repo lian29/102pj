@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>資訊管理系 - 證照查詢系統</title>
+    <script type="text/javascript">
+      function check_data()
+      {
+        if (document.myForm.student_id.value.length == 0)
+          alert("帳號不可以空白");
+        else if (document.myForm.password.value.length == 0)
+          alert("密碼不可以空白");
+        else 
+          myForm.submit();
+      }
+    </script>
+</head>
+<body>
+<div id="sidebar1">
+		<div class="login">
+	<form action="checkpwd.php" method="post" name="myForm">
+		<p>帳號：
+			<input name="student_id" type="text" size="15">
+    	</p>
+		<p>密碼： 
+			<input name="password" type="password" size="15">
+    	</p>
+		<p>
+			<input type="button" value="登入" onClick="check_data()"> 
+			<input type="reset" value="重填">
+		</p>
+    </form>
+</div>
+</div>
+</body>
+</html>
