@@ -3,28 +3,64 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>系上公告</title>
-</head>	
+</head BGCOLOR=teal  topmargin="0" leftmargin="0">	
 <body>
+
+<MARQUEE BGCOLOR=YELLOW><font size="5" color="#00bfff" FACE="標楷體, 新細明體">歡迎來到證照管理系統</MARQUEE><P>
 <div align="center"> 
 
-		<font  size="10" color="#9932cc"> <B>系上公告</B> </font><br>
+		<font  size="10" color="#9932cc"FACE="標楷體, 新細明體"> <B>系上公告</B> </font><br>
 </br>
 </div>
 <table border='4'width="55%"align="center" cellspacing="1"  cellpadding="1" >
 <td colspan=3 align=center><br></br>
 
 
-		<font  size="5" color="#00bfff">1.歡迎來到證照管理系統</font><br>
+		<font  size="5" color="#00bfff" FACE="標楷體, 新細明體">1.可在各分頁點擊右鍵重整網頁</font><br>
 </br>
 
-		<font size="5" color="#00bfff">2.可在各分頁點擊右鍵重整網頁</font> <br>
-</br>
+<FORM METHOD="TEST" ACTION="Mailto:xxx@vv.bb.nn.mm" >
+<font size="5" color="#00bfff" FACE="標楷體, 新細明體">2.請選擇你想考取的證照：
+<BR><INPUT TYPE="checkbox" NAME="SPORT" VALUE=RED HAT>紅帽國際證照
+<BR><INPUT TYPE="checkbox" NAME="SPORT" VALUE=TQC>TQC專業證照
+<BR><INPUT TYPE="checkbox" NAME="SPORT" VALUE=ERP>ERP進銷存證照
+<BR><INPUT TYPE="checkbox" NAME="SPORT" VALUE=4>其他
+<br>
+<INPUT TYPE="submit" NAME="Submit_Bottom" VALUE="送出">
+<INPUT TYPE="reset" NAME="Reset_Bottom" VALUE="重新作答">
+</FORM>
+<br>
+<font size="5" color="#00bfff" FACE="標楷體, 新細明體">3.請問你比較傾向考取哪一類型證照：
+<SELECT NAME="0">
+<OPTION VALUE="1" >以選擇題為主
+<OPTION VALUE="2">以實作為主
+<OPTION VALUE="3">兩者皆可
+</SELECT>
+<br>
+<INPUT TYPE="submit" NAME="Submit_Bottom" VALUE="送出">
+<INPUT TYPE="reset" NAME="Reset_Bottom" VALUE="重新作答">
+</FORM>
+<br>
 
-		<font size="5" color="#00bfff">3.預祝各位考照順利</font> <br>
+<font size="5" color="#00bfff" FACE="標楷體, 新細明體">4.請使用者發表本系統哪個部分需要改善：<BR>
+<TEXTAREA NAME="COMMENT" ROWS=5 COLS=30>
+我的意見：
+</TEXTAREA>
+
+<br>
+<INPUT TYPE="submit" NAME="Submit_Bottom" VALUE="送出">
+<INPUT TYPE="reset" NAME="Reset_Bottom" VALUE="重新作答">
+</FORM>
 </br>
-              
+ <font size="5" color="#00bfff" FACE="標楷體, 新細明體">5.預祝各位考照順利！！</font> <br>
+</br>	
+      
 
 </td>
+
+
 	</div>
+
+
 </body>
 </html>
